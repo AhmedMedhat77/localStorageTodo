@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(120deg, #f6d365, #fda085);
+  color: #fff;
+  font-family: "Poppinst", "sans-serf";
+  min-height: 100vh;
+}
+header {
+  font-size: 1.5rem;
+}
+
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: #fff;
+  outline: none;
+}
+form button {
+  color: #ff6f47;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  color: #fff;
+  background-color: #ff6f47;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  width: 10rem;
+  color: #d88771;
+  overflow: hidden;
+  padding: 1rem;
+}
+.select {
+  margin-left: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 1rem;
+  background-color: #ff6f47;
+  transition: 0.3s ease all;
+}
+.select:hover::after {
+  color: #ff6f47;
+  background-color: #fff;
+}
+
+/* todo */
+.todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  background-color: #fff;
+  color: #000;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s ease all;
+}
+.todo li {
+  flex: 1;
+}
+.trash-button,
+.complete-button {
+  background-color: #ff6f47;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+}
+.complete-button {
+  background-color: rgb(22, 194, 22);
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
