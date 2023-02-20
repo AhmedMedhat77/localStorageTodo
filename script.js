@@ -15,9 +15,7 @@ todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("click", filterTodo);
 
 // Functions
-if (localStorage.getItem('tasks')) {
-  todos = JSON.parse(localStorage.getItem('tasks'));
-}
+
 // add Todo
 function addTodo(e) {
   e.preventDefault();
@@ -114,3 +112,10 @@ function saveLocalTodos(todo) {
 
   localStorage.setItem("todos", JSON.stringify(todos));
 }
+
+function getLocalTodos(){
+  if(window.localStorage.getItem('tasks').length!==0){
+    document.body.appned(window.localStorage.getItem('todos'))
+  }
+}
+getLocalTodos()
