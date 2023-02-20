@@ -15,7 +15,9 @@ todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("click", filterTodo);
 
 // Functions
-
+if (localStorage.getItem('tasks')) {
+  todos = JSON.parse(localStorage.getItem('tasks'));
+}
 // add Todo
 function addTodo(e) {
   e.preventDefault();
